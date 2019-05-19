@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
   font-size: 16px;
   color: #444545;
@@ -7,7 +11,9 @@ body {
 
 /** HEADER **/
 header {
-	margin: 10px;
+	margin: 20px;
+	padding-bottom: 10px;
+	background-color: white;
 }
 
 a {
@@ -19,17 +25,35 @@ ul {
 	list-style: none;
 }
 
+p {
+	margin-top: 0px;
+}
+
+#header-logo {
+	float: left;
+}
+
+#menu {
+	float: right;
+}
+
+/*
 .menu-element {
 	display: inline;
 	margin: 10px;
 }
+*/
 
 /* END HEADER */
 
 /* END MAIN CONTENT */
 .sekcja {
 	margin-left: 30px;
-	margin-right: 30px;
+	margin-right: 40px;
+}
+
+.sekcja-background {
+	/*clear: both;*/
 }
 
 .naglowek-sekcji {
@@ -49,12 +73,45 @@ ul {
 	text-align: center;
 }
 
+/*
+.left {
+	width: 40%;
+	float: left;
+}
+
+.right {
+	width: 60%;
+	float: left;
+}
+*/
+
+.float-clear {
+	clear: left;
+}
+
 #o-fundacji, #kontakt {
 	background-color: #F2F3F4;
 }
 
+.grafika-sekcji {
+	text-align: center;
+	padding: 30px;
+}
 
 /* images */
+img {
+    max-width:100%;
+    height:auto;
+}
+
+#zdjecie-joanna {
+	padding-top: 0px;
+}
+
+#zdjecie-oboz {
+	margin: 5px;
+}
+
 .round {
     border-radius: 50%;
 }
@@ -63,4 +120,71 @@ ul {
 /* END MAIN CONTENT */
 
 /** FOOTER **/
+footer {
+	margin: 10px;
+}
 /* END FOOTER */
+
+
+/********** Large, medium and small devices only **********/
+
+@media (min-width: 768px) {
+
+	.menu-element {
+		display: inline;
+		margin: 10px;
+	}
+
+	.left {
+		width: 40%;
+		float: left;
+	}
+
+	.right {
+		width: 60%;
+		float: left;
+	}
+
+	.float-clear {
+		clear: left;
+	}
+
+}
+
+/********** Small and extra small devices only **********/
+
+@media (min-width: 590px) and (max-width: 767px) {
+
+	.menu-element {
+		display: inline;
+		margin: 10px;
+	}
+
+	.left {
+		width: 100%;
+	}
+
+	.right {
+		width: 100%;
+	}
+
+}
+	
+/********** Phones only **********/
+
+@media (max-width: 589px) {
+
+	.menu-element {
+		margin: 0px 10px 0px 0px;
+		font-size: 14px;
+	}
+
+	ul {
+		margin: 0px;
+	}
+
+	#logo-menu {
+		zoom: 0.8;
+	}
+
+}
